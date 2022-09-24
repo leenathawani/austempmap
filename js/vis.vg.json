@@ -15,8 +15,8 @@
           "data": {
             "url": "https://raw.githubusercontent.com/JiazhouLiu/FIT3179/main/VegaLite/3_choropleth_map/data/covid_10_10_2020.csv"
           },
-          "key": "Country",
-          "fields": ["Active"]
+          "key": "Country_Name",
+          "fields": ["current"]
         }
       },
       {"calculate": "datum.Active + 0.1", "as": "Active Cases"}
