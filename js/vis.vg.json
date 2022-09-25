@@ -15,10 +15,10 @@
                   "lookup": "properties.NAME",
                   "from": {
                     "data": {
-                      "url": "https://raw.githubusercontent.com/leenathawani/vegalite_map/main/data/API_EN.ATM.CO2E.PC_DS2_en_csv_v2_4558911.csv"
+                      "url": "https://raw.githubusercontent.com/leenathawani/vegalite_map/main/data/API_SP.DYN.LE00.IN_DS2_en_csv_v2_4558314.csv"
                     },
-                    "key": "Country_Name",
-                    "fields": ["current"]
+                    "key": "Country Name",
+                    "fields": ["2021"]
                   }
                 },
                 {"calculate": "datum.current + 0.1", "as": "Current Emissions"}
