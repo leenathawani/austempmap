@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Global Carbon Emissions",
+    "title": "Global Life Expectancy",
     "width": 800,
     "height": 400,
     "projection": {"type": "equalEarth"},
@@ -17,21 +17,21 @@
                     "data": {
                       "url": "https://raw.githubusercontent.com/leenathawani/vegalite_map/main/data/API_SP.DYN.LE00.IN_DS2_en_csv_v2_4558314.csv"
                     },
-                    "key": "Country Name",
-                    "fields": ["2021"]
+                    "key": "Country_Name",
+                    "fields": ["current"]
                   }
                 },
-                {"calculate": "datum.current + 0.1", "as": "Current Emissions"}
+                {"calculate": "datum.current + 0.1", "as": "Current"}
               ],
               "mark": {"type": "geoshape"},
               "encoding": {
                 "color": {
-                  "field": "Current Emissions",
+                  "field": "Current",
                   "type": "quantitative",
                   "scale": {"type": "linear"}
                 },
                 "tooltip": [
-                  {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+                  {"field": "properties.NAME", "type": "nominal", "title": "Country_Name"},
                   {"field": "current", "type": "quantitative"}
                 ]
               }
