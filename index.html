@@ -14,6 +14,8 @@
 
 <body>
 
+  <h1>Global Life Expectancy</h1>
+
     <div id="choropleth_map"></div>
 
     <script type="text/javascript">
@@ -23,6 +25,23 @@
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
       }).catch(console.error);
     </script>
+
+    <br>
+    <br>
+
+    <h1>Top 20 Countries with Highest Life Expectancy</h1>
+
+    <div id="top20countries"></div>
+
+    <script type="text/javascript">
+    
+      var spec2 = "js/interactive_map.vg.json";
+      vegaEmbed('#top20countries', spec2).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+    </script>
+
+
     
 
 
