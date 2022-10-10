@@ -1,0 +1,43 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "config": {"view": {"stroke": null}},
+    "title": {"text": "Line Chart"},
+    "data": {
+      "url": "https://raw.githubusercontent.com/leenathawani/vegalite_map/main/data/continent_averages.csv"
+    },
+    "mark": {
+        "type": "line",
+        "point": true
+    },
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "title": "Year",
+        "type": "quantitative",
+        "scale": {"domain": [2000, 2020]},
+        "axis": {"domain": false, "grid": false, "ticks": false}
+      },
+      "y": {
+        "field": "Avg_LE",
+        "title": "Life Expectancy (no. of years)",
+        "type": "quantitative",
+        "scale": {"domain": [0, 92]}
+      },
+      "color": {
+        "field": "Continent",
+        "title": "Continent",
+        "type": "nominal",
+        "scale": {"scheme": "tableau10"}
+      },
+      "tooltip": [
+        {"field": "Continent", "type": "nominal", "title": "Continent"},
+        {
+          "field": "Avg_LE",
+          "type": "quantitative",
+          "title": "Life Expectancy (years)",
+          "format": ".2f"
+        }
+      ]
+    }
+  }
