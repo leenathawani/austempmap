@@ -1,0 +1,42 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "config": {"view": {"stroke": null}},
+    "title": {"text": "Average Life Expectancy in Oceania"},
+    "data": {
+      "values": [
+        {"Continent": "Oceania", "Avg_LE": "73.46355526"},
+        {"Continent": "Remaining", "Avg_LE": "26.53644474"}
+      ]
+    },
+    "layer": [{
+      "mark": {"type": "arc", "innerRadius": 50}
+    }, {
+      "mark": {"type": "text", "text": "73.46", "fontSize": 30}, 
+      "encoding": {
+        "color": {"value": "black"}
+      }
+    }, {
+      "mark": {"type": "text", "text": "Years", "dy": 20},
+      "encoding": {
+        "color": {"value": "black"}
+      }
+    }],
+    "encoding": {
+      "theta": {"field": "Avg_LE", "type": "quantitative"},
+      "color": {
+        "field": "Continent", 
+        "type": "nominal", 
+        "legend": null,
+        "scale": {"domain": ["Oceania", "Remaining"], "range": ["#F1C40F", "#95A5A6"]}},
+        "tooltip": [
+          {"field": "Continent", "type": "nominal", "title": "Continent"},
+          {
+            "field": "Avg_LE",
+            "type": "quantitative",
+            "title": "Life Expectancy (years)",
+            "format": ".2f"
+          }
+        ]
+    }
+  }

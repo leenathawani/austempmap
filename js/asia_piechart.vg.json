@@ -1,0 +1,42 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "config": {"view": {"stroke": null}},
+    "title": {"text": "Average Life Expectancy in Asia"},
+    "data": {
+      "values": [
+        {"Continent": "Asia", "Avg_LE": "74.56765719"},
+        {"Continent": "Remaining", "Avg_LE": "25.43234281"}
+      ]
+    },
+    "layer": [{
+      "mark": {"type": "arc", "innerRadius": 50}
+    }, {
+      "mark": {"type": "text", "text": "74.57", "fontSize": 30}, 
+      "encoding": {
+        "color": {"value": "black"}
+      }
+    }, {
+      "mark": {"type": "text", "text": "Years", "dy": 20},
+      "encoding": {
+        "color": {"value": "black"}
+      }
+    }],
+    "encoding": {
+      "theta": {"field": "Avg_LE", "type": "quantitative"},
+      "color": {
+        "field": "Continent", 
+        "type": "nominal", 
+        "legend": null,
+        "scale": {"domain": ["Asia", "Remaining"], "range": ["#F1C40F", "#95A5A6"]}},
+        "tooltip": [
+          {"field": "Continent", "type": "nominal", "title": "Continent"},
+          {
+            "field": "Avg_LE",
+            "type": "quantitative",
+            "title": "Life Expectancy (years)",
+            "format": ".2f"
+          }
+        ]
+    }
+  }
