@@ -1,0 +1,116 @@
+body {
+    background-image: url('bg_pattern.jpg');
+    background-repeat: repeat;
+    background-size: 40%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+} 
+
+h1 {
+    margin: 20px;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    position: absolute;
+}
+
+h2 {
+    margin: 710px;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+}
+
+p {
+    font-size: 12px;
+    margin: 80px;
+    text-align: center;
+    position: absolute;
+    width: 60%;
+}
+
+td {
+    height: 200px;
+    width: 200px;
+    margin: 25px;
+    padding: 10px;
+}
+
+.mainContent {
+    background-color: #fff1de;
+    width: 60%;
+    height: 2000px;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: 10px 10px 10px 10px 20px grey;
+}
+
+#choropleth_map {
+    justify-content: center;
+    margin-top: 180px;  
+    position: absolute;
+}
+
+#top20countries {
+    justify-content: center;
+    margin-top: 760px;  
+    position: absolute;
+}
+
+#title3 {
+    margin: 1270px;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+}
+
+#bumpchart {
+    justify-content: center;
+    margin-top: 1320px;  
+    position: absolute;
+}
+
+#title4 {
+    margin: 1600px;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+}
+
+#doughnutchart1 {
+    justify-content: center;
+    margin-top: 650px;  
+    position: absolute;
+}
+
+#doughnutchart2 {
+    justify-content: center;
+    margin-top: 650px;  
+    position: absolute;
+}
+
+#doughnutchart3 {
+    justify-content: center;
+    margin-top: 650px;  
+    position: absolute;
+}
+
+#doughnutchart4 {
+    justify-content: center;
+    margin-top: 650px;  
+    position: absolute;
+}
+
+#doughnutchart5 {
+    justify-content: center;
+    margin-top: 650px;  
+    position: absolute;
+}
+
+
+

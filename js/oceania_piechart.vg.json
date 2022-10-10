@@ -1,8 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 600,
-    "config": {"view": {"stroke": null}},
-    "title": {"text": "Average Life Expectancy in Oceania"},
+    "width": 150,
+  "height": 150,
+  "config": {"view": {"stroke": null},  "background": "#fff1de"},
+    "title": {"text": "Oceania"},
     "data": {
       "values": [
         {"Continent": "Oceania", "Avg_LE": "73.46355526"},

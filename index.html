@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Background Image Source: https://www.freepik.com/premium-vector/seamless-pattern-with-tiny-people-walking-street-backdrop-with-men-women-children-performing-outdoor-activity-colorful-vector-illustration-flat-cartoon-style-wallpaper-fabric-print_22438116.htm -->
+
 <head>
+  <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,40 +17,73 @@
 
 <body>
 
-  <h1>Global Life Expectancy</h1>
+  <div class="mainContent">
+
+    <h1>Global Life Expectancy</h1>
+
+    <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+      when an unknown printer took a galley of type and scrambled it to make a type 
+      specimen book. It has survived not only five centuries, but also the leap into 
+      electronic typesetting, remaining essentially unchanged. It was popularised in the 
+      1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more 
+      recently with desktop publishing software like Aldus PageMaker including versions of 
+      Lorem Ipsum. </p>
 
     <div id="choropleth_map"></div>
 
-    <script type="text/javascript">
+    <h2 id="title2">Top 20 Countries with Highest Life Expectancy</h2>
     
-      var spec2 = "js/vis.vg.json";
-      vegaEmbed('#choropleth_map', spec2).then(function(result) {
-        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-      }).catch(console.error);
-    </script>
-
-    <br>
-    <br>
-
-    <h1>Top 20 Countries with Highest Life Expectancy</h1>
-
     <div id="top20countries"></div>
 
-    <script type="text/javascript">
+    <h2 id="title3">Which Continents have the highest life expectancy?</h2>
     
-      var spec2 = "js/interactive_map.vg.json";
-      vegaEmbed('#top20countries', spec2).then(function(result) {
-        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-      }).catch(console.error);
-    </script>
+    <div id="bumpchart"></div>
 
+    <h2 id="title4">Where do they stand?</h2>
 
+    <table>
+      <tr>
+        <td><div id="doughnutchart1"></div></td>
+        <td><div id="doughnutchart2"></div></td>
+        <td><div id="doughnutchart3"></div></td>
+        <td><div id="doughnutchart4"></div></td>
+        <td><div id="doughnutchart5"></div></td>
+      </tr>
+    </table>
     
 
+  </div>
 
 
-    <!-- <div id="map">
-    </div> -->
 </body>
 
 </html>
+
+<script type="text/javascript">
+  var map = "js/vis.vg.json";
+  vegaEmbed('#choropleth_map', map).then(function(result) {}).catch(console.error);
+
+  var barchart = "js/interactive_map.vg.json";
+  vegaEmbed('#top20countries', barchart).then(function(result) {}).catch(console.error);
+
+  var bumpchart = "js/bump_chart.vg.json";
+  vegaEmbed('#bumpchart', bumpchart).then(function(result) {}).catch(console.error);
+
+  var doughnutchart1 = "js/africa_piechart.vg.json";
+  vegaEmbed('#doughnutchart1', doughnutchart1).then(function(result) {}).catch(console.error);
+
+  var doughnutchart2 = "js/americas_piechart.vg.json";
+  vegaEmbed('#doughnutchart2', doughnutchart2).then(function(result) {}).catch(console.error);
+
+  var doughnutchart3 = "js/asia_piechart.vg.json";
+  vegaEmbed('#doughnutchart3', doughnutchart3).then(function(result) {}).catch(console.error);
+
+  var doughnutchart4 = "js/europe_piechart.vg.json";
+  vegaEmbed('#doughnutchart4', doughnutchart4).then(function(result) {}).catch(console.error);
+
+  var doughnutchart5 = "js/oceania_piechart.vg.json";
+  vegaEmbed('#doughnutchart5', doughnutchart5).then(function(result) {}).catch(console.error);
+
+
+</script>

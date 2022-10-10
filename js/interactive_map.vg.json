@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 450,
-    "config": {"view": {"stroke": null}},
+    "width": 350,
+    "config": {"view": {"stroke": null}, "background": "#fff1de"},
     "data": {
       "url": "https://raw.githubusercontent.com/leenathawani/interactive_vis_life_expectancy/main/data_with_continents.csv"
     },

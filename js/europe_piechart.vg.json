@@ -1,8 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 600,
-    "config": {"view": {"stroke": null}},
-    "title": {"text": "Average Life Expectancy in Europe"},
+    "width": 150,
+  "height": 150,
+  "config": {"view": {"stroke": null},  "background": "#fff1de"},
+    "title": {"text": "Europe"},
     "data": {
       "values": [
         {"Continent": "Europe", "Avg_LE": "78.28989648"},

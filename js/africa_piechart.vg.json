@@ -1,8 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 600,
-  "config": {"view": {"stroke": null}},
-  "title": {"text": "Average Life Expectancy in Africa"},
+  "width": 150,
+  "height": 150,
+  "config": {"view": {"stroke": null},  "background": "#fff1de"},
+  "title": {"text": "Africa"},
   "data": {
     "values": [
       {"Continent": "Africa", "Avg_LE": "65.16819855"},
