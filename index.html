@@ -38,11 +38,7 @@
 
     <h2 id="title3">Which Continents have the highest life expectancy?</h2>
     
-    <div id="bumpchart"></div>
-
-    <h2 id="title4">Where do they stand?</h2>
-
-    <table>
+    <table id="table1">
       <tr>
         <td><div id="doughnutchart1"></div></td>
         <td><div id="doughnutchart2"></div></td>
@@ -51,7 +47,10 @@
         <td><div id="doughnutchart5"></div></td>
       </tr>
     </table>
-    
+
+    <h2 id="title4">Where do they stand?</h2>
+
+    <div id="bumpchart"></div>
 
   </div>
 
@@ -84,6 +83,5 @@
 
   var doughnutchart5 = "js/oceania_piechart.vg.json";
   vegaEmbed('#doughnutchart5', doughnutchart5).then(function(result) {}).catch(console.error);
-
 
 </script>

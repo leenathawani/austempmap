@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 600,
-    "height": 200,
+    "width": 700,
+    "height": 230,
     "config": {"view": {"stroke": null},  "background": "#fff1de"},
     "data": {
       "url": "https://raw.githubusercontent.com/leenathawani/vegalite_map/main/data/continent_averages.csv"
@@ -29,6 +29,7 @@
           "domain": ["Africa", "Americas", "Asia", "Europe", "Oceania"],
           "range": ["black", "#127153", "#C91A3C", "#0C71AB", "#C91A3C", "#0C71AB"]
         }
-      }
+      },
+      "strokeWidth": {"value": 3}
     }
   }
