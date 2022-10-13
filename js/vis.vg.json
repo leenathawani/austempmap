@@ -1,11 +1,24 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "height": "container",
+  "height": 400,
+  "config": {"view": {"stroke": null}},
+  "params": [
+    {
+      "name": "Year_selection",
+      "value": 2020,
+      "bind": {
+        "input": "range",
+        "min": 2010,
+        "max": 2020,
+        "step": 1,
+        "name": "Year: "
+      }
+    }
+  ],
   "projection": {
     "type": "equalEarth"
   },
-  "config": {"view": {"stroke": null}, "background": "#fff1de"},
   "layer": [
     {
       "data": {
@@ -36,56 +49,54 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/leenathawani/vegalite_map/main/js/ne_110m.json",
-        "format": {
-          "type": "topojson",
-          "feature": "ne_110m_admin_0_countries"
-        }
+        "url": "https://raw.githubusercontent.com/leenathawani/vegalite_map/main/data/yearly_data_country.csv"
       },
       "transform": [
         {
-          "lookup": "properties.NAME",
+          "lookup": "Country_Name",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/leenathawani/vegalite_map/main/data/API_SP.DYN.LE00.IN_DS2_en_csv_v2_4558314.csv"
+              "url": "https://raw.githubusercontent.com/leenathawani/vegalite_map/main/js/ne_110m.json",
+              "format": {
+                "type": "topojson",
+                "feature": "ne_110m_admin_0_countries"
+              }
             },
-            "key": "Country_Name",
-            "fields": [
-              "current"
-            ]
-          }
-        }
+            "key": "properties.NAME"
+          },
+          "as": "geo"
+        },
+        {"filter": "datum.Year == Year_selection"}
       ],
-      "mark": {
-        "type": "geoshape"
-      },
+      "mark": {"type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5},
       "encoding": {
-        "color": {
-          "field": "current",
+        "shape": {"field": "geo", "type": "geojson"},
+         "color": {
+          "field": "Life_Expectancy",
           "type": "quantitative",
           "title": "Life Expectancy (no. of years)",
           "scale": {
-            "scheme": "yelloworangebrown"
+            "domain": [50, 60, 65, 70, 75, 77, 80, 82, 85, 90],
+            "scheme": "magma",
+            "reverse": true
           },
           "legend": {
             "direction": "horizontal",
-            "gradientLength": 500,
+            "gradientLength": 700,
             "orient": "bottom",
-            "offset": 20,
+            "offset": 10,
             "labelAlign": "center"
           }
         },
         "tooltip": [
+          {"field": "Country_Name", "type": "nominal", "title": "Country"},
           {
-            "field": "properties.NAME",
-            "type": "nominal",
-            "title": "Country"
-          },
-          {
-            "field": "current",
+            "field": "Life_Expectancy",
             "type": "quantitative",
-            "title": "Life Expectancy (no. of years)"
-          }
+            "title": "Life_Expectancy (in years)",
+            "format": ","
+          },
+          {"field": "Year", "type": "quantitative", "title": "Year"}
         ]
       }
     }

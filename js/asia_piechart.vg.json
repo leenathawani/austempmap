@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 150,
   "height": 150,
-  "config": {"view": {"stroke": null},  "background": "#fff1de"},
+  "config": {"view": {"stroke": null}},
     "title": {"text": "Asia"},
     "data": {
       "values": [

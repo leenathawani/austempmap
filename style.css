@@ -1,9 +1,10 @@
 body {
-    background-image: url('bg_pattern.jpg');
+    background-image: url('bg-transparent.png');
     background-repeat: repeat;
     background-size: 40%;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     padding: 20px;
+    color: black;
 } 
 
 h1 {
@@ -39,7 +40,7 @@ p {
 }
 
 .mainContent {
-    background-color: #fff1de;
+    background-color: white;
     width: 62%;
     height: 1950px;
     justify-content: center;
@@ -64,7 +65,7 @@ p {
     justify-content: center;
     margin-top: 180px;  
     position: absolute;
-    width: 600px;
+    width: 750px;
     height: 800px;
 }
 
