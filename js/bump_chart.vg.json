@@ -26,9 +26,8 @@
       "color": {
         "field": "Continent", "type": "nominal",
         "scale": {
-          "domain": ["Africa", "Americas", "Asia", "Europe", "Oceania"],
-          "range": ["black", "#127153", "#C91A3C", "#0C71AB", "#C91A3C", "#0C71AB"]
-        }
+          "domain": ["Africa", "Americas", "Asia", "Europe", "Oceania"], 
+          "range": ["#ffa400", "#ef476f", "#e63946", "#118ab2", "#073b4c"]}
       },
       "strokeWidth": {"value": 3}
     }

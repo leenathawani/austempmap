@@ -29,7 +29,7 @@
         "field": "Continent", 
         "type": "nominal", 
         "legend": null,
-        "scale": {"domain": ["Americas", "Remaining"], "range": ["#F1C40F", "#95A5A6"]}},
+        "scale": {"domain": ["Americas", "Remaining"], "range": ["#ef476f", "#95A5A6"]}},
         "tooltip": [
           {"field": "Continent", "type": "nominal", "title": "Continent"},
           {

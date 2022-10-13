@@ -46,7 +46,9 @@
         "field": "continent",
         "type": "nominal",
         "title": "Filter by Continent",
-        "scale": {"scheme": "tableau10"}
+        "scale": {
+          "domain": ["Africa", "Americas", "Asia", "Europe", "Oceania"], 
+          "range": ["#ffa400", "#ef476f", "#e63946", "#118ab2", "#073b4c"]}
       },
       "opacity": {
         "condition": {"param": "continent_highlight", "value": 1.0},

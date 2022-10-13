@@ -2,7 +2,8 @@ body {
     background-image: url('bg_pattern.jpg');
     background-repeat: repeat;
     background-size: 40%;
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px;
 } 
 
 h1 {
@@ -39,14 +40,25 @@ p {
 
 .mainContent {
     background-color: #fff1de;
-    width: 60%;
-    height: 2000px;
+    width: 62%;
+    height: 1950px;
     justify-content: center;
     display: flex;
     margin: auto;
-    margin-top: 20px;
-    box-shadow: 10px 10px 10px 10px 20px grey;
+    /* margin-top: 20px; */
+    border-width: 2px;
+    border-style: solid;
+    padding: 10px;
+    /* box-shadow: 10px 10px 10px 10px 20px grey; */
 }
+
+/* #globalLE {
+    width: 20%;
+    height: 80px;
+    border-width: 2px;
+    border-style: solid;
+    margin: 170px 60px 0px 0px;
+} */
 
 #choropleth_map {
     justify-content: center;
@@ -70,12 +82,12 @@ p {
 
 #bumpchart {
     justify-content: center;
-    margin-top: 1650px;  
+    margin-top: 1620px;  
     position: absolute;
 }
 
 #title4 {
-    margin: 1600px;
+    margin: 1560px;
     justify-content: center;
     width: 100%;
     text-align: center;
