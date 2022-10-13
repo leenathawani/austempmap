@@ -64,6 +64,8 @@ p {
     justify-content: center;
     margin-top: 180px;  
     position: absolute;
+    width: 600px;
+    height: 800px;
 }
 
 #top20countries {
