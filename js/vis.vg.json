@@ -94,7 +94,7 @@
             "field": "Life_Expectancy",
             "type": "quantitative",
             "title": "Life_Expectancy (in years)",
-            "format": ","
+            "format": ".2f"
           },
           {"field": "Year", "type": "quantitative", "title": "Year"}
         ]

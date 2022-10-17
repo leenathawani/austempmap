@@ -1,6 +1,11 @@
-﻿Continent,LE,Remaining
-Africa,65.16819855,34.83180145
-Americas,75.53358304,24.46641696
-Asia,74.56765719,25.43234281
-Europe,78.28989648,21.71010352
-Oceania,73.46355526,26.53644474
+﻿Continent,Type,LE
+Africa,Avg,65.16819855
+Africa,Remaining,34.83180145
+Americas,Avg,75.53358304
+Americas,Remaining,24.46641696
+Asia,Avg,74.56765719
+Asia,Remaining,25.43234281
+Europe,Avg,78.28989648
+Europe,Remaining,21.71010352
+Oceania,Avg,73.46355526
+Oceania,Remaining,26.53644474
