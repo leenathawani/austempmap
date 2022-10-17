@@ -13,8 +13,6 @@ body {
     position: absolute;
     text-align:center;
     margin-left:0;
-    /* height: 0.5px;
-    background-color: #3e1d60; */
     margin-top: 257px;
     border-top: 0.5px dashed #3e1d60;
 }
@@ -24,8 +22,6 @@ body {
     position: absolute;
     text-align:center;
     margin-left:0;
-    /* height: 0.5px;
-    background-color: #3e1d60; */
     margin-top: 830px;
     border-top: 0.5px dashed #3e1d60;
 }
@@ -35,8 +31,6 @@ body {
     position: absolute;
     text-align:center;
     margin-left:0;
-    /* height: 0.5px;
-    background-color: #3e1d60; */
     margin-top: 1490px;
     border-top: 0.5px dashed #3e1d60;
 }
@@ -46,8 +40,6 @@ body {
     position: absolute;
     text-align:center;
     margin-left:0;
-    /* height: 0.5px;
-    background-color: #3e1d60; */
     margin-top: 1881px;
     border-top: 0.5px dashed #3e1d60;
 }
@@ -57,8 +49,6 @@ body {
     position: absolute;
     text-align:center;
     margin-left:0;
-    /* height: 0.5px;
-    background-color: #3e1d60; */
     margin-top: 2279px;
     border-top: 0.5px dashed #3e1d60;
 }
@@ -94,19 +84,16 @@ h2 {
 }
 
 .mainContent {
-    /* background-color:#fff1de; */
     background-color: white;
     width: 57%;
     height: 2600px;
     justify-content: center;
     display: flex;
     margin: auto;
-    /* margin-top: 20px; */
     border-width: 2px;
     border-style: solid;
     padding: 0px 40px;
     border-radius: 10px;
-    /* box-shadow: 10px 10px 10px 10px 20px grey; */
 }
 
 #intro {
@@ -333,6 +320,32 @@ h2 {
     position: absolute;
     margin-top: 2440px;
     left: 318px;
+}
+
+/*---------------------*/
+
+.legend {
+    float: right;
+    position: fixed; 
+    top: 585px;
+    left: 210px;
+    margin: 0;
+    background-color: white;
+    border-radius: 10%;
+    width: 70px;
+    padding: 5px;
+
+}
+
+.legend p {
+    font-size: 10px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: inline-block;
 }
 
 /*---------------------*/

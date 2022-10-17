@@ -42,7 +42,7 @@
       "type": "nominal",
       "scale": {
         "domain": ["Africa", "Americas", "Asia", "Europe", "Oceania"],
-        "range": ["#ffa400", "#ef476f", "#e63946", "#118ab2", "#073b4c"]
+        "range": ["#780116", "#8ac926", "#00afb9", "#ef233c", "#073b4c"]
       },
       "legend": false
     },

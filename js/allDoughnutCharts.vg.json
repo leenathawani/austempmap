@@ -48,7 +48,7 @@
               "legend": null,
               "scale": {
                 "domain": ["Avg", "Remaining"],
-                "range": ["#118ab2", "#95A5A6"]
+                "range": ["#ef233c", "#95A5A6"]
               }
             }
           }
@@ -94,7 +94,7 @@
               "legend": null,
               "scale": {
                 "domain": ["Avg", "Remaining"],
-                "range": ["#ef476f", "#95A5A6"]
+                "range": ["#8ac926", "#95A5A6"]
               }
             }
           }
@@ -140,7 +140,7 @@
               "legend": null,
               "scale": {
                 "domain": ["Avg", "Remaining"],
-                "range": ["#e63946", "#95A5A6"]
+                "range": ["#00afb9", "#95A5A6"]
               }
             }
           }
@@ -232,7 +232,7 @@
               "legend": null,
               "scale": {
                 "domain": ["Avg", "Remaining"],
-                "range": ["#ffa400", "#95A5A6"]
+                "range": ["#780116", "#95A5A6"]
               }
             }
           }
