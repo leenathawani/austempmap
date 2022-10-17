@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 350,
-    "config": {"view": {"stroke": null}},
+    "config": {"view": {"stroke": null}, "font": "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"},
     "data": {
       "url": "https://raw.githubusercontent.com/leenathawani/interactive_vis_life_expectancy/main/data_with_continents.csv"
     },
@@ -10,7 +10,7 @@
         "window": [{"op": "rank", "as": "rank"}],
         "sort": [{"field": "current", "order": "descending"}]
       },
-      {"filter": "datum.rank <= 20"}
+      {"filter": "datum.rank <= 15"}
     ],
     "layer": [
       {"mark": "bar",
@@ -46,6 +46,7 @@
         "field": "continent",
         "type": "nominal",
         "title": "Filter by Continent",
+        "legend": false,
         "scale": {
           "domain": ["Africa", "Americas", "Asia", "Europe", "Oceania"], 
           "range": ["#ffa400", "#ef476f", "#e63946", "#118ab2", "#073b4c"]}

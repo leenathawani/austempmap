@@ -6,6 +6,8 @@
 <head>
   <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
@@ -19,45 +21,80 @@
 
   <div class="mainContent">
 
-    <h1>Global Life Expectancy</h1>
+      <h1 id="mainTitle">Global Life Expectancy</h1>
 
-    <p> Life Expectancy refers to the number of years a person is expected to live, and 
-      is an indication of the overall mortality level of the population. Longevity is affected
-      by various factors such as gender, genetics, hygiene levels, access to healthcare, 
-      crime rate, etc. and can therefore be significantly different in different parts of
-      the world. These visualisations depict the variation in life expectancy across the 
-    different countries and continents around the globe. </thead> </p>
+      <p id="intro"> Life Expectancy refers to the number of years a person is expected to live, and 
+        is an indication of the overall mortality level of the population. Longevity is affected
+        by various factors such as gender, genetics, hygiene levels, access to healthcare, 
+        crime rate, etc. and can therefore be significantly different in different parts of
+        the world. These visualisations depict the variation in life expectancy across the 
+      different countries and continents around the globe. </thead> </p>
 
-    <!-- <div id="globalLE">
-      <h1>72.98</h1>
-      <h3>years</h3>
-      <h5>Average World Life Expectancy in 2022</h5>
-    </div> -->
+      <div id="globalLE">
+        <h1 id="WorldLELabel1">72.98 years</h1>
+        <p id="WorldLELabel2">Average World Life Expectancy (2022)</p>
+      </div>
 
-    <div id="choropleth_map"></div>
+      <hr id="hr1">
 
-    <h2 id="title2">Top 20 Countries with Highest Life Expectancy</h2>
+      <h2 id="mapTitle">World Life Expectancy Over Time</h2>
+
+      <div id="choropleth_map"></div>
+
+      <hr id="hr2">
+
+      <h2 id="bar_chart_title">Life Expectancy By Continent</h2>
+
+      <p id="barChartPara">
+        There is quite a large variation amongst not only continents, but also the many
+        countries in the same continent. These large deviations are due to various factors
+        such as genetics, access to healthcare, diet and nutrition, exercise and lifestyle, 
+        crime rate, amongst others. Since these factors differ in different countries, there
+        is bound to be an impact on life expectancy.
+      </p>
+
+      <div id="barChart"></div>
+
+      <hr id="hr3">
+
+      <h2 id="top15title"> Top 15 Countries</h2>
+
+      <p id="top15Para">
+        Countries in Asia form the Top 5 Countries in the world with highest Life
+        expectancy, despite Asia only being third in terms of highest average life expectancy.
+        European countries take up majority of the Top 15, which is in line with the continent
+        having the highest average life expectancy in the world. A noteworthy mention to Australia,
+        being the only country outside these 2 continents in the Top 15.
+      </p>    
     
-    <div id="top20countries"></div>
+    <div id="top15countries"></div>
 
-    <h2 id="title3">Which Continents have the highest life expectancy?</h2>
-    
-    <table id="table1">
-      <tr>
-        <td><div id="doughnutchart4"></div></td>
-        <td><div id="doughnutchart2"></div></td>
-        <td><div id="doughnutchart1"></div></td>
-        <td><div id="doughnutchart5"></div></td>
-        <td><div id="doughnutchart3"></div></td>
-      </tr>
-    </table>
+    <hr id="hr4">
 
-    <h2 id="title4">Where do they stand?</h2>
+    <h2 id="doughnutchartstitle"> Life Expectancy by Continent</h2>
+
+    <p id="doughnutchartsPara">
+      Europe has consistenly had the highest average life expectancy compared to all 
+      other countries, at 78.29 years in 2020. The Americas are not far behind with an average Life
+      expectancy of about 3 years below, with this trend going downwards until an average life expectancy
+      of 65.17 years in Africa. This is a substantial difference of more than 13 years, indicating a clear distinction.
+    </p>    
+
+    <div id="doughnutCharts"></div>
+
+    <hr id="hr5">
+
+    <h2 id="bumpChartTitle">Where do they stand?</h2>
+
+    <p id="bumpChartPara">
+      The ranking of continents in terms of highest life expectancy has remained the same
+      throughout history with the sole exception of 2005. In 2005, Asia and America exchanged places, 
+      as Asia went up to having the third highest Life Expectancy and the Americas went down a place. 
+      This wasn't short lived, as this trend continues til date.
+    </p>   
 
     <div id="bumpchart"></div>
-
-  </div>
-
+  
 
 </body>
 
@@ -68,7 +105,7 @@
   vegaEmbed('#choropleth_map', map, {"actions": false}).then(function(result) {}).catch(console.error);
 
   var barchart = "js/interactive_map.vg.json";
-  vegaEmbed('#top20countries', barchart, {"actions": false}).then(function(result) {}).catch(console.error);
+  vegaEmbed('#top15countries', barchart, {"actions": false}).then(function(result) {}).catch(console.error);
 
   var bumpchart = "js/bump_chart.vg.json";
   vegaEmbed('#bumpchart', bumpchart, {"actions": false}).then(function(result) {}).catch(console.error);
@@ -87,5 +124,11 @@
 
   var doughnutchart5 = "js/oceania_piechart.vg.json";
   vegaEmbed('#doughnutchart5', doughnutchart5, {"actions": false}).then(function(result) {}).catch(console.error);
+
+  var barChart = "js/bar_chart.vg.json";
+  vegaEmbed('#barChart', barChart, {"actions": false}).then(function(result) {}).catch(console.error);
+
+  var doughnutCharts = "js/allDoughnutCharts.vg.json";
+  vegaEmbed('#doughnutCharts', doughnutCharts, {"actions": false}).then(function(result) {}).catch(console.error);
 
 </script>

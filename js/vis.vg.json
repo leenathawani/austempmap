@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
   "height": 400,
-  "config": {"view": {"stroke": null}},
+  "config": {"view": {"stroke": null}, "font": "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"},
   "params": [
     {
       "name": "Year_selection",
@@ -74,15 +74,15 @@
          "color": {
           "field": "Life_Expectancy",
           "type": "quantitative",
-          "title": "Life Expectancy (no. of years)",
+          "title": "Life Expectancy (in years)",
           "scale": {
             "domain": [50, 60, 65, 70, 75, 77, 80, 82, 85, 90],
-            "scheme": "magma",
+            "scheme": "plasma",
             "reverse": true
           },
           "legend": {
             "direction": "horizontal",
-            "gradientLength": 700,
+            "gradientLength": 725,
             "orient": "bottom",
             "offset": 10,
             "labelAlign": "center"

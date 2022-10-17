@@ -1,0 +1,68 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {"view": {"stroke": null}, "font": "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"},
+  "width":"container",
+  "data": {
+    "url": "https://raw.githubusercontent.com/leenathawani/vegalite_map/main/data/yearly_data_country.csv"
+  },
+  "params": [
+    {
+      "name": "Year_selection",
+      "value": 2020,
+      "bind": {
+        "input": "range",
+        "min": 2000,
+        "max": 2020,
+        "step": 1,
+        "name": "Year: "
+      }
+    },
+    {
+      "name": "Continent_selection",
+      "value": "Americas",
+      "bind": {
+        "input": "select",
+        "options": ["Americas", "Europe", "Africa", "Asia", "Oceania"],
+        "labels": ["Americas", "Europe", "Africa", "Asia", "Oceania"],
+        "name": "Continent Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.Year == Year_selection"},
+    {"filter": "datum.continent == Continent_selection"},
+    {"filter": "datum.Life_Expectancy > 0"}
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Country_Name",
+      "type": "nominal",
+      "axis": {"labelAngle": -50},
+      "title": "Country"
+    },
+    "y": {"field": "Life_Expectancy", "type": "quantitative", "title": "Life Expectancy"},
+    "color": {
+      "field": "continent",
+      "condition": {
+        "param": "Continent_selection",
+        "field": "continent",
+        "type": "nominal"
+      },
+      "scale": {
+        "domain": ["Africa", "Americas", "Asia", "Europe", "Oceania"],
+        "range": ["#ffa400", "#ef476f", "#e63946", "#118ab2", "#073b4c"]
+      },
+      "legend": false
+    },
+    "tooltip": [
+      {"field": "Country_Name", "type": "nominal", "title": "Country"},
+      {
+        "field": "Life_Expectancy",
+        "type": "quantitative",
+        "title": "Life Expectancy (years)",
+        "format": ".2f"
+      }
+    ]
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple donut chart with embedded data.",
+  "config": {
+    "view": {"stroke": null},
+    "font": "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/leenathawani/vegalite_map/main/data/LE_for_piechart.csv"
+  },
+  "hconcat": [
+    {
+      "width": 150,
+      "height": 150,
+      "transform": [{"filter": {"field": "Continent", "oneOf": ["Europe"]}}],
+      "layer": [
+        {
+          "mark": {"type": "text", "fontSize": 18, "dy": -2},
+          "transform": [{"filter": {"field": "Type", "equal": "Avg"}}],
+          "encoding": {
+            "text": {"field": "LE", "type": "nominal", "format": ".2f"},
+            "color": {"value": "black"}
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "dy": 95,
+            "fontSize": 14,
+            "fontWeight": "normal"
+          },
+          "encoding": {
+            "text": {"field": "Continent", "type": "nominal"},
+            "color": {"value": "black"}
+          }
+        },
+        {
+          "mark": {"type": "text", "text": "Years", "dy": 15, "fontSize": 11},
+          "encoding": {"color": {"value": "black"}}
+        },
+        {
+          "mark": {"type": "arc", "innerRadius": 40},
+          "encoding": {
+            "theta": {"field": "LE", "type": "quantitative"},
+            "color": {
+              "field": "Type",
+              "type": "nominal",
+              "legend": null,
+              "scale": {
+                "domain": ["Avg", "Remaining"],
+                "range": ["#118ab2", "#95A5A6"]
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "width": 150,
+      "height": 150,
+      "transform": [{"filter": {"field": "Continent", "oneOf": ["Americas"]}}],
+      "layer": [
+        {
+          "mark": {"type": "text", "fontSize": 18, "dy": -2},
+          "transform": [{"filter": {"field": "Type", "equal": "Avg"}}],
+          "encoding": {
+            "text": {"field": "LE", "type": "nominal", "format": ".2f"},
+            "color": {"value": "black"}
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "dy": 95,
+            "fontSize": 14,
+            "fontWeight": "normal"
+          },
+          "encoding": {
+            "text": {"field": "Continent", "type": "nominal"},
+            "color": {"value": "black"}
+          }
+        },
+        {
+          "mark": {"type": "text", "text": "Years", "dy": 15, "fontSize": 11},
+          "encoding": {"color": {"value": "black"}}
+        },
+        {
+          "mark": {"type": "arc", "innerRadius": 40},
+          "encoding": {
+            "theta": {"field": "LE", "type": "quantitative"},
+            "color": {
+              "field": "Type",
+              "type": "nominal",
+              "legend": null,
+              "scale": {
+                "domain": ["Avg", "Remaining"],
+                "range": ["#ef476f", "#95A5A6"]
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "width": 150,
+      "height": 150,
+      "transform": [{"filter": {"field": "Continent", "oneOf": ["Asia"]}}],
+      "layer": [
+        {
+          "mark": {"type": "text", "fontSize": 18, "dy": -2},
+          "transform": [{"filter": {"field": "Type", "equal": "Avg"}}],
+          "encoding": {
+            "text": {"field": "LE", "type": "nominal", "format": ".2f"},
+            "color": {"value": "black"}
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "dy": 95,
+            "fontSize": 14,
+            "fontWeight": "normal"
+          },
+          "encoding": {
+            "text": {"field": "Continent", "type": "nominal"},
+            "color": {"value": "black"}
+          }
+        },
+        {
+          "mark": {"type": "text", "text": "Years", "dy": 15, "fontSize": 11},
+          "encoding": {"color": {"value": "black"}}
+        },
+        {
+          "mark": {"type": "arc", "innerRadius": 40},
+          "encoding": {
+            "theta": {"field": "LE", "type": "quantitative"},
+            "color": {
+              "field": "Type",
+              "type": "nominal",
+              "legend": null,
+              "scale": {
+                "domain": ["Avg", "Remaining"],
+                "range": ["#e63946", "#95A5A6"]
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "width": 150,
+      "height": 150,
+      "transform": [{"filter": {"field": "Continent", "oneOf": ["Oceania"]}}],
+      "layer": [
+        {
+          "mark": {"type": "text", "fontSize": 18, "dy": -2},
+          "transform": [{"filter": {"field": "Type", "equal": "Avg"}}],
+          "encoding": {
+            "text": {"field": "LE", "type": "nominal", "format": ".2f"},
+            "color": {"value": "black"}
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "dy": 95,
+            "fontSize": 14,
+            "fontWeight": "normal"
+          },
+          "encoding": {
+            "text": {"field": "Continent", "type": "nominal"},
+            "color": {"value": "black"}
+          }
+        },
+        {
+          "mark": {"type": "text", "text": "Years", "dy": 15, "fontSize": 11},
+          "encoding": {"color": {"value": "black"}}
+        },
+        {
+          "mark": {"type": "arc", "innerRadius": 40},
+          "encoding": {
+            "theta": {"field": "LE", "type": "quantitative"},
+            "color": {
+              "field": "Type",
+              "type": "nominal",
+              "legend": null,
+              "scale": {
+                "domain": ["Avg", "Remaining"],
+                "range": ["#073b4c", "#95A5A6"]
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "width": 150,
+      "height": 150,
+      "transform": [{"filter": {"field": "Continent", "oneOf": ["Africa"]}}],
+      "layer": [
+        {
+          "mark": {"type": "text", "fontSize": 18, "dy": -2},
+          "transform": [{"filter": {"field": "Type", "equal": "Avg"}}],
+          "encoding": {
+            "text": {"field": "LE", "type": "nominal", "format": ".2f"},
+            "color": {"value": "black"}
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "dy": 95,
+            "fontSize": 14,
+            "fontWeight": "normal"
+          },
+          "encoding": {
+            "text": {"field": "Continent", "type": "nominal"},
+            "color": {"value": "black"}
+          }
+        },
+        {
+          "mark": {"type": "text", "text": "Years", "dy": 15, "fontSize": 11},
+          "encoding": {"color": {"value": "black"}}
+        },
+        {
+          "mark": {"type": "arc", "innerRadius": 40},
+          "encoding": {
+            "theta": {"field": "LE", "type": "quantitative"},
+            "color": {
+              "field": "Type",
+              "type": "nominal",
+              "legend": null,
+              "scale": {
+                "domain": ["Avg", "Remaining"],
+                "range": ["#ffa400", "#95A5A6"]
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "resolve": {"scale": {"color": "independent"}}
+}

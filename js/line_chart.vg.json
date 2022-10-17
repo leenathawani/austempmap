@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 600,
-    "config": {"view": {"stroke": null}},
+    "config": {"view": {"stroke": null}, "font": "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"},
     "title": {"text": "Line Chart"},
     "data": {
       "url": "https://raw.githubusercontent.com/leenathawani/vegalite_map/main/data/continent_averages.csv"
